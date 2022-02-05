@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="/static/css/create-quiz.css">
+        <script src="/static/js/get-cookie.js" defer></script>
+        <script src="/static/js/create-quiz.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <a href="/"><img id="logo" src="/static/img/logo.png"></a>
+            <div id="kajut-name-div">
+                <input id="kajut-name-input" placeholder="Introduce el nombre del kajut">
+            </div>
+            <div id="submit-kajut-div">
+                <button id="submit-kajut-button" onclick="submitKajut()">
+                    Finalizar
+                </button>
+            </div>
+        </header>
+        <main>
+            <aside>
+                <div id="question-div">
+                </div>
+                <div id="add-question-div">
+                    <button id="add-question-button">
+                        <span class="full-text">Añadir pregunta</span>
+                        <span class="short-text">+</span>
+                    </button>
+                </div>
+            </aside>
+            <div id="question-creator">
+                <div id="title-div">
+                    <input oninput="actualizarTitulo()" id="title-input" type="text" placeholder="Introduce la pregunta">
+                    <div id="options-menu-div">
+                        <button id="options-menu-button"><img src="/static/img/menu-icon.svg"></button>
+                        <div id="options-drop-menu">
+                            <button id="delete-question-button">Eliminar</button>
+                        </div>
+                    </div>                
+                </div>
+                <div id="image-div" onclick="insertarImagen()">
+                    <div id="default-image-panel">
+                        <img id="default-image" src="/static/img/add-image.png">
+                    </div>
+                    <div id="image-panel">
+                        <img id="image">
+                        <div id="delete-image">
+                            <button id="delete-image-button">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+                <div id="answers">
+                    <div class="answer-button" id="answer1-div">
+                        <div></div>
+                        <input oninput="actualizarRespuesta1()" type="text" placeholder="Introduce la primera respuesta" id="answer1-input">
+                        <div class="correct-div">
+                            <button id="answer1-correct-button" class="correct-button" data-toogle="off" onclick="toogleRespuestaCorrecta1()">
+                                <img id="answer1-correct-image" src="/static/img/correct-answer.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-button" id="answer2-div">
+                        <div></div>
+                        <input oninput="actualizarRespuesta2()" type="text" placeholder="Introduce la segunda respuesta" id="answer2-input">
+                        <div class="correct-div">
+                            <button id="answer2-correct-button" class="correct-button" data-toogle="off" onclick="toogleRespuestaCorrecta2()">
+                                <img id="answer2-correct-image" src="/static/img/correct-answer.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-button" id="answer3-div">
+                        <div></div>
+                        <input oninput="actualizarRespuesta3()" type="text" placeholder="Introduce la tercera respuesta" id="answer3-input">
+                        <div class="correct-div">
+                            <button id="answer3-correct-button" class="correct-button" data-toogle="off" onclick="toogleRespuestaCorrecta3()">
+                                <img id="answer3-correct-image" src="/static/img/correct-answer.png">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="answer-button" id="answer4-div">
+                        <div></div>
+                        <input oninput="actualizarRespuesta4()" type="text" placeholder="Introduce la cuarta respuesta" id="answer4-input">
+                        <div class="correct-div">
+                            <button id="answer4-correct-button" class="correct-button" data-toogle="off" onclick="toogleRespuestaCorrecta4()">
+                                <img id="answer4-correct-image" src="/static/img/correct-answer.png">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="/static/css/join-game.css">
+        <script src="/static/js/get-cookie.js" defer></script>
+        <script src="/static/js/join-game.js" defer></script>
+    </head>
+    <body>
+        <header>
+            <a id="logo-link" href="/"><img id="logo" src="/static/img/logo.png"></a>
+            <div id="chrono-div">
+                <p id="chrono"></p>
+            </div>
+        </header>
+        <div class="join-game-panel">
+            <div id="join-game-div">
+                <input type="text" id="game_code_input" placeholder="Introduce el código de la sala">
+                <button id="join-game-button" onclick="checkGame()">Unirse</button>
+            </div>
+        </div>
+        <div class="waiting-game-start-panel">
+            <h2>Esperando a que empiece la partida . . .</h2>
+        </div>
+        <div class="game-panel">
+            <div id="title-div">
+                <p id="title-paragraph">Esto es un texto de prueba dasdasdasdasdas</p>
+            </div>
+            <div id="image-div">
+                <div id="image-panel">
+                    <img id="image">
+                </div>
+            </div>
+            <div id="answers">
+                <div class="answer-button" id="answer1-div" onclick="seleccionarRespuesta1()">
+                    <p id="answer1-paragraph">Esto es un texto de prueba dasdasdasdasdas</p>
+                </div>
+                <div class="answer-button" id="answer2-div" onclick="seleccionarRespuesta2()">
+                    <p id="answer2-paragraph">Esto es un texto de prueba dasdasdasdasdas</p>
+                </div>
+                <div class="answer-button" id="answer3-div" onclick="seleccionarRespuesta3()">
+                    <p id="answer3-paragraph">Esto es un texto de prueba dasdasdasdasdas</p>
+                </div>
+                <div class="answer-button" id="answer4-div" onclick="seleccionarRespuesta4()">
+                    <p id="answer4-paragraph">Esto es un texto de prueba dasdasdasdasdas</p>
+                </div>
+            </div>
+        </div>
+        <div id="waiting-for-players-response-panel">
+            <h2>Esperando a que el resto de jugadores respondan ( ͡° ͜ʖ ͡°)</h2>
+            <h2>Si se te ocurre algo chulo que poner en esta pantalla dime (◠﹏◠)</h2>
+        </div>
+        <div id="post-answer-freeze-time-panel">
+            <div class="answer-result-div" id="correct-answer-div">
+                <img src="/static/img/correct-answer-game.png">
+                <h2>Respuesta correcta!</h2>
+            </div>
+            <div class="answer-result-div" id="incorrect-answer-div">
+                <img src="/static/img/incorrect-answer-game.png">
+                <h2>Respuesta incorrecta :/</h2>
+            </div>
+        </div>
+        <div class="time-over-panel">
+            <h2>Puntuación</h2>
+            <div id="score-list">
+            </div>
+        </div>
+    </body>
+</html>
+ 

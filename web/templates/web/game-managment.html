@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+        <link rel="stylesheet" href="/static/css/game-managment.css">
+        <script src="/static/js/get-cookie.js" defer></script>
+        <script src="/static/js/game-managment.js" defer></script>
+    </head>
+    <body>
+        <input type="hidden" id="game-code" value="{{game_code}}">
+        <header>
+            <a href="/" id="logo-link"><img id="logo" src="/static/img/logo.png"></a>
+            <div id="quiz-name">{{quiz_name}}</div>
+            <div id="start-game-div">
+                <button id="start-game-button" onclick="startGame()">
+                    Empezar partida 
+                </button>
+            </div>
+        </header>
+        <div class="main" id="game_code_page">
+            <div id="game_code_div">
+                <p id="game_code"></p>
+            </div>
+            <div id="users-list-div">
+            </div>
+            <h2 id="match-running-message">La partida está en curso, manten esta página abierta</h2>
+        </div>
+    </body>
+</html>
