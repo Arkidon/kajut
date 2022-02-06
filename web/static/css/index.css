@@ -16,6 +16,12 @@ main{
     height: calc(100vh - 90px);
 }
 
+#logo-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #logo{
     height: 100%;
 }
